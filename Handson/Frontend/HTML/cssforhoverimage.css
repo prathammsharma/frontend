@@ -1,0 +1,58 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+html,body{
+    width: 100%;
+    height:100%;
+
+}
+body{
+    background-image:url(backgroundplayingcards.jfif);
+    background-size: 1800px;
+    background-repeat: no-repeat;
+}
+.playingcard{
+    background:transparent;
+    width:200px;
+    height:280px;
+    display: inline-block;
+    margin: 10px;
+    perspective: 1000px;
+    margin-top: 300px;
+    padding-left: 200px;
+}
+.flipcard{
+    position: relative;
+    width:100%;
+    height:100%;
+    border-radius: 20px;
+    border:5px solid black;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+.playingcard:hover .flipcard{
+    transform: rotateY(-180deg);
+}
+.cardfront,.cardback{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    border-radius:20px;
+    backface-visibility: hidden;
+}
+.cardfront{
+    background-color: rgb(255, 255, 255);
+    transform: rotateY(-180deg);
+}
+.cardback{
+    background-color: rgb(255, 255, 255);
+
+}
+.cardfront img,.cardback img{
+    width:100%;
+    heigth:100%;
+    border-radius: 20px;
+
+}
+

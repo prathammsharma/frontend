@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Effect</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        
+        .parallax {
+            position: relative;
+            height: 100vh;
+            background-image: url(nature.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .content {
+            position: relative;
+            text-align: center;
+            padding: 50px;
+            font-size: 24px;
+            background: white;
+            color: black;
+        }
+        
+        .parallax-layer {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .layer1 { top: 20%; animation: move 5s infinite alternate ease-in-out; }
+        .layer2 { top: 40%; animation: move 7s infinite alternate ease-in-out; }
+        .layer3 { top: 60%; animation: move 9s infinite alternate ease-in-out; }
+        
+        @keyframes move {
+            from { transform: translateY(0px); }
+            to { transform: translateY(20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <div class="parallax-layer layer1">This is Layer 1 - Slow</div>
+        <div class="parallax-layer layer2">This is Layer 2 - Medium</div>
+        <div class="parallax-layer layer3">This is Layer 3 - Fast</div>
+    </div>
+    
+    <div class="content">
+        <p>Here You can scroll down to see the parallax effect in action.</p>
+    </div>
+    
+    <div class="parallax"></div>
+    
+    <div class="content">
+        <p>More content here...</p>
+    </div>
+</body>
+</html>

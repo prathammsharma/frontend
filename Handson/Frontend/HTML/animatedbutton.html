@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            background-color: #35d0d5;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .button:active {
+            animation: clickAnimation 0.3s ease;
+        }
+        @keyframes clickAnimation {
+            0% {
+                transform: scale(1);
+                background-color: #ff0000;
+            }
+            50% {
+                transform: scale(1.2);
+                background-color: #e1ff00;
+            }
+            100% {
+                transform: scale(1);
+                background-color: #ea00ff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animated Button: </h1>
+    <button class="button">CLICK HERE!!!</button>
+</body>
+</html>

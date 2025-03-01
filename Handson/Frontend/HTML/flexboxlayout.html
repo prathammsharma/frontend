@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, footer {
+            background: #aa1997;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .column {
+            background: #f4f4f4;
+            padding: 1rem;
+            margin: 0.5rem;
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>This is a Flexbox Layout:</h1>
+        </header>
+        <div class="main-content">
+            <div class="column">Left Column</div>
+            <div class="column">Center Column</div>
+            <div class="column">Right Column</div>
+        </div>
+        <footer>
+            <p>Copyright: 2025 Pratham Sharma</p>
+            <br>
+            <p>Gmail: psk1710@gmail.com</p>
+        </footer>
+    </div>
+</body>
+</html>

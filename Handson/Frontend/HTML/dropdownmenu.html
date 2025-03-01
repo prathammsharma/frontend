@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .navbar {
+            background-color: #981313;
+            padding: 10px;
+            display: flex;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        .navbar a:hover {
+            background-color: #c12424;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown .dropbtn {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown .dropbtn::after {
+            content: '\25BC'; 
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #c23333;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        }
+        .dropdown-content a {
+            padding: 10px;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#first">Bats</a>
+        <a href="#second">Balls</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Format</a>
+            <div class="dropdown-content">
+                <a href="#odi">ONE DAY TOURNAMENT</a>
+                <a href="#t20">T20</a>
+                <a href="#test">TEST MATCH</a>
+                <a href="#gully">GULLY CRICKET</a>
+            </div>
+        </div>
+        <a href="#third">Contact</a>
+    </nav>
+</body>
+</html>
